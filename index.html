@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cuestionario Desarrollo de Apps Móviles</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/283b770b67.js" crossorigin="anonymous"></script>
+		<style>
+
+			@media screen and (max-width: 1000px){
+				section{
+					flex-direction: column-reverse; /*la imagen se ponga primero*/
+				}
+
+				section > img{
+					height: 40%;
+				}
+
+				.texto{
+					text-align: center;
+				}
+			}
+
+			@media screen and (max-width: 600px){
+					section > img{
+						height: 25%;
+					}
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body{
+				font-family: 'Roboto', sans-serif;
+			}
+
+			html{
+				scroll-behavior: smooth;
+			}
+
+			/****************************************/
+			/****************************************/
+			/************  SECTIONS  ****************/
+			/****************************************/
+			/****************************************/
+
+			section#sector1{
+				height: 947px;
+				display: flex;
+				justify-content: space-evenly;
+				padding: 0 40px;
+				align-items: center;
+			}
+			section#sector2{
+				height: 947px;
+				justify-content: space-evenly;
+				padding: 0 40px;
+				align-items: center;
+				display: none;
+			}
+
+			section#sectorregistro{
+				height: 947px;
+				justify-content: space-evenly;
+				padding: 0 40px;
+				align-items: center;
+				display: none;
+			}
+
+			section#sector3{
+				height: 947px;
+				display: none;
+				padding: 0 40px;
+				
+			}
+
+			/****************************************/
+			/****************************************/
+			/************  GRADIENTES  ****************/
+			/****************************************/
+			/****************************************/
+
+			section:nth-child(1){ /*el primer elemento del selector*/
+				background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+			}
+
+			section:nth-child(2){ 
+				background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+			}
+
+			section:nth-child(3){ 
+				background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+			}
+
+			section:nth-child(4){ 
+				background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+			}
+
+			/****************************************/
+			/****************************************/
+			/************  BOTONES  ****************/
+			/****************************************/
+			/****************************************/
+
+			section #ini1, #ini2{
+				background-color: #7bff63;
+				color: black;
+				font-size: 20px;
+				text-align: center;
+				height: 45px;
+				width: 103px;
+				border:4px solid #85d3dc;
+				border-radius: 12px;
+				transition-duration: 0.3s;
+				-webkit-transition-duration:0.3s;
+				box-shadow: 0px 5px 10px 0px #74ebd5;
+				cursor: pointer;
+				margin-top: -790px;
+				margin-right: 251px;
+			}
+
+			section #ini1:hover, #ini2:hover{
+				background-color: #adf7ff;
+				color: white;
+			}
+
+			section #ini3{
+				background-color: #7bff63;
+				color: black;
+				font-size: 20px;
+				text-align: center;
+				height: 45px;
+				width: 103px;
+				border:4px solid #85d3dc;
+				border-radius: 12px;
+				transition-duration: 0.3s;
+				-webkit-transition-duration:0.3s;
+				box-shadow: 0px 5px 10px 0px #74ebd5;
+				cursor: pointer;
+				margin-top: 25px;
+				margin-right: 251px;
+			}
+
+			section #ini3:hover{
+				background-color: #adf7ff;
+				color: white;
+			}
+
+
+			section a.bot_sesion{
+				display: inline-block;
+				padding: 9px 0;
+				color: #283773;
+				text-decoration: none;
+				width: 156px;
+				text-align: center;
+				border: 1px solid #fff;
+				border-radius: 50px;
+				background: #fff;
+				
+			}
+			section a.bot_sesion:hover{
+				box-shadow: 2px 2px 2px #000000;
+			}
+
+			section a.bot_comenzar{
+				display: inline-block;
+				padding: 9px 0;
+				color: #283773;
+				text-decoration: none;
+				width: 156px;
+				text-align: center;
+				border: 1px solid #fff;
+				border-radius: 50px;
+				background: #fff;
+			}
+
+			section a.bot_comenzar:hover{
+				box-shadow: 2px 2px 2px #000000;
+			}
+
+			section a.iniciar{
+				display: inline-block;
+				padding: 9px 0;
+				color: #283773;
+				text-decoration: none;
+				width: 156px;
+				text-align: center;
+				border: 1px solid #fff;
+				border-radius: 50px;
+				background: #fff;
+			}
+
+			section a.iniciar:hover{
+				box-shadow: 2px 2px 2px #000000;
+			}
+
+			section a.siguiente{
+				display: inline-block;
+			    padding: 9px 0;
+			    color: #000000;
+			    text-decoration: none;
+			    width: 146px;
+			    text-align: center;
+			    border: 1px solid #fff;
+			    border-radius: 5px;
+			    background: #7bff63;
+			    cursor: pointer;
+			    margin-top: 31px;
+			    margin-left: -644px;
+			}
+
+			section a.siguiente:hover{
+				background-color: #adf7ff;
+				color: white;
+				box-shadow: 2px 2px 15px #000000;
+			}
+
+			section a.bot_registrar{
+				display: inline-block;
+				padding: 9px 0;
+				color: #283773;
+				text-decoration: none;
+				width: 156px;
+				text-align: center;
+				border: 1px solid #fff;
+				border-radius: 50px;
+				background: #fff;
+				margin-top: 41px;
+			}
+
+			section a.bot_registrar:hover{
+				box-shadow: 2px 2px 2px #000000;
+			}
+			
+			/****************************************/
+			/****************************************/
+			/************  IMAGEN  ****************/
+			/****************************************/
+			/****************************************/
+
+			section img{
+				height: 60%;
+			}
+
+			/****************************************/
+			/****************************************/
+			/************  PARRAFOS EN SECTIONS  ****************/
+			/****************************************/
+			/****************************************/
+
+			section p{
+				font-weight: 300;
+				margin-bottom: 15px;
+				margin-top: 15px;
+			}
+
+
+
+			html{
+				scroll-behavior: smooth;
+			}
+
+					/*OTROS*/
+
+
+
+			section div.texto h2{
+				font-size: 50px;
+				font-weight: 500;
+				margin-bottom: 5px;
+			}
+
+		
+			h2#cuestionario{
+				clear: both;
+			    text-align: center;
+			    margin-top: 72px;
+			    margin-left: 177px;
+			    font-size: 35px;
+
+			}
+
+			p#preguntas1, #preguntas2, #preguntas3, #preguntas4, #preguntas5, #preguntas6, #preguntas7 ,#preguntas8 ,#preguntas9, #preguntas10  {
+				font-size: 23px;
+				margin-top: 225px;
+			}
+
+			section#sectorregistro h1{
+				font-size: 50px;
+			    font-weight: 500;
+			    margin-top: -155px;
+			    margin-bottom: 372px;
+			    display: inline;
+			    margin-left: -90px;
+
+			}
+			
+			div.input-contenedor{
+				margin-top: 18px;
+				margin-right: 125px;
+				font-size: 30px;
+			}
+			div.input-contenedor input{
+				font-size: 23px;
+			}
+
+			div#p1{
+				margin-left: -650px;
+			}
+
+			div#p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9 ,#p10{
+				display: none;
+				margin-left: -650px;
+			}
+
+			div#devoluciones{
+				margin-top: 123px;
+			    margin-left: -81px;
+			    width: 590px;
+			    font-size: 21px;
+			    color: #ffffff;
+			}
+
+			div#total_resp{
+				margin-top: 137px;
+			    font-size: 58px;
+			    margin-left: -79px;
+			    color: green;
+			    animation: bounce1 2s alternate infinite ease-in;
+			}
+
+			@keyframes bounce1{
+				0%{
+					transform: translateX(0%);
+				}
+				100%{
+					transform: translateY(30%);
+				}
+			}
+
+
+
+			div.radio input{
+				display: none;
+			}
+
+			div.radio label{
+				color: #0774D9; 
+				padding: 5px 15px 5px 51px; /*5 arriba ,15 derecha, 5 abajo, 51 izquierda*/
+				display: block;
+				position: relative;
+				font-size: 1em;
+				border-radius: 3px;
+				cursor: pointer;
+				-webkit-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+			}
+
+			div.radio label:hover{
+				background: rgba(0,116,217,0.2);
+			}
+
+			div.radio label:before{ /*es el redondito*/
+				content: "";
+				width: 17px;
+				height: 17px;
+				display: inline-block;
+				background: none;
+				border: 3px solid #0774D9;
+				border-radius: 50%;
+				position: absolute;
+				left: 17px;
+				top: 4px;
+			}
+
+			div.radio input:checked + label{ /*cuando este seleccionado el input edito el label*/
+				padding: 5px 15px;
+				background: #0074D9;
+				border-radius: 2px;
+				color: #fff;
+			}	
+
+			div.radio input:checked + label:before{
+				display: none;
+			}
+
+			#img4{
+				display: none;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<section id="sector1">
+			<div class="texto">
+				<h2>Bienvenido al Cuestionario de Desarrollo de Apps M&oacute;viles</h2>
+				<p>Al completar este cuestionario vamos a otorgarte un puntaje del 0 al 100, &eacute;ste cuenta con 10 preguntas, las cuales valen 10 puntos cada una. Buena suerte!</p>
+				<p>Para acceder al cuestionario: </p>
+				<!--<p>Ingrese sesi&oacute;n: </p>-->
+				<a href="#sector2" onclick="aparecer_sesion()" class="bot_sesion">Iniciar sesi&oacute;n</a>
+				<!--<p>Registrarse: </p>-->
+				<a href="#sectorregistro" onclick="aparecer_registro()" class="bot_sesion">Registrarme</a>
+				<!--<p>Para ir directo al cuestionario:</p>-->
+				<!--<a href="#sector3" class="bot_comenzar">COMENZAR</a>-->
+			</div>
+			<img src="imagen1.svg" alt="img1">		
+		</section>
+
+		<section id="sector2">
+			<button type="button" id="ini1" onclick="boton_inicio()"><i class="fas fa-home"></i></button>
+			<div class="texto">
+				<p class="psector2">Ingrese sesi&oacute;n para poder contactarnos con usted:</p>
+				<label for="email">Correo electr&oacute;nico</label>
+				<input type="text" name="emai" id="email" placeholder="Correo Electr&oacute;nico">
+
+				<label for="contraseña">Contrase&ntilde;a</label>
+				<input type="password" name="contra" id="contraseña" placeholder="Contrase&ntilde;a">
+
+				<a href="#sector3" class="iniciar" onclick="validacioncorreo(document.getElementById('email').value)">Iniciar sesi&oacute;n</a>
+
+				<p id="error_email"></p>
+
+				<p>Al registrarte, aceptas nuestas Condiciones de uso y Politica de privacidad.</p>
+				<p>¿No tienes una cuenta?  <a href="#sectorregistro" onclick="aparecer_registro()">Registrar</a></p>
+			</div>
+			<img src="imagen2.svg" alt="img2">
+
+		</section>
+
+		<section id="sectorregistro">
+			<button type="button" id="ini2" onclick="boton_inicio()"><i class="fas fa-home"></i></button>
+			<div id="aparecer_botoninicio"></div>
+			<h1>Completá tus datos</h1>
+			<div class="contenedor">
+				<div class="input-contenedor">
+			
+					<label for="nombre">Nombre</label>
+					<input type="text" name="name" id="nombre" placeholder="Nombre"> 
+				</div>
+				
+				<div class="input-contenedor">
+					<label for="e_mail">E-mail</label>
+					<input type="text" name="mail" id="e_mail" placeholder="E-mail">
+				</div>
+
+				<div class="input-contenedor">
+		
+					<label for="contraseña_registro">Contrase&ntilde;a</label>
+					<input type="password" name="contra" id="contraseña_registro" placeholder="Contrase&ntilde;a">
+				</div>
+				<a href="#sector3" class="bot_registrar" onclick="validacioncorreo(document.getElementById('e_mail').value)">Registrarme</a>
+
+				<p>Al registrarte, aceptas nuestas Condiciones de uso y Politica de privacidad.</p>
+				<p>¿Ya tienen una cuenta?  <a href="#sector2" onclick="aparecer_sesion()">Iniciar sesi&oacute;n</a></p>
+			</div>
+			<img src="imagen3.svg" alt="img3">
+
+		</section>
+
+
+		<section id = "sector3">
+			<button type="button" id="ini3" onclick="location.reload()"><i class="fas fa-home"></i></button>
+			<h2 id="cuestionario">Cuestionario de Desarrollo de Apps M&oacute;viles</h2>
+			
+			<form id="form_sector3">
+
+				<div class="radio">
+
+					<div id="p1">
+						<p id="preguntas1">1. ¿Cuál es la característica tecnológica clave de la generación 4G?</p>
+						<input type="radio" name="pregunta1" id="r1">
+						<label for="r1">A. La adopción del protocolo WiMAX.</label>
+						<input type="radio" name="pregunta1" id="r2">
+						<label for="r2">B. La adopción de la tecnología de conmutación basada en paquetes para todos los servicios</label><!--CORRECTA!-->
+						<input type="radio" name="pregunta1" id="r3">
+						<label for="r3">C. La aparición de las aplicaciones de streaming, que requieren un gran ancho de banda.</label>
+						<input type="radio" name="pregunta1" id="r4">
+						<label for="r4">D. La incorporación de la tecnología digital de conmutación basada en paquetes para la telefonía móvil.</label>
+					</div>
+
+					<div id="p2">
+						<p id="preguntas2">2. Las fases del proceso de desarrollo de una app no incluyen...</p>
+						<input type="radio" name="pregunta2" id="r5">
+						<label for="r5">A. Concepto.</label>
+						<input type="radio" name="pregunta2" id="r6">
+						<label for="r6">B. Preproducción.</label>
+						<input type="radio" name="pregunta2" id="r7">
+						<label for="r7">C. Producción</label>
+						<input type="radio" name="pregunta2" id="r8">
+						<label for="r8">D. Estudio de limitaciones hardware</label><!--CORRECTA!-->
+					</div>
+
+					<div id="p3">
+						<p id="preguntas3">3. ¿Para qué plataformas podemos programar con una cuenta de desarrollador gratuita de Apple?</p>
+						<input type="radio" name="pregunta3" id="r9">
+						<label for="r9">A. Ninguna, se necesita una cuenta de pago.</label>
+						<input type="radio" name="pregunta3" id="r10">
+						<label for="r10">B. iOS y OS X.</label>
+						<input type="radio" name="pregunta3" id="r11">
+						<label for="r11">C. iOS, OS X, Apple Watch y Apple TV.</label><!--CORRECTA!-->
+						<input type="radio" name="pregunta3" id="r12">
+						<label for="r12">D. iOS, Android y Windows Phone.</label>
+					</div>
+
+					<div id="p4">
+						<p id="preguntas4">4. A la hora de idear nuestra aplicación, qué factor NO es necesario tener en cuenta...</p>
+						<input type="radio" name="pregunta4" id="r13">
+						<label for="r13">A. Nicho de mercado.</label>
+						<input type="radio" name="pregunta4" id="r14">
+						<label for="r14">B. Necesidades del usuario.</label>
+						<input type="radio" name="pregunta4" id="r15">
+						<label for="r15">C. Competencia.</label>
+						<input type="radio" name="pregunta4" id="r16">
+						<label for="r16">D. Limitaciones de los dispositivos.</label><!--CORRECTA!-->
+					</div>
+
+					<div id="p5">
+						<p id="preguntas5">5. ¿Cuál de los siguientes dulces NO ha dado nombre aún a una versión de Android?</p>
+						<input type="radio" name="pregunta5" id="r17"><!--CORRECTA!-->
+						<label for="r17">A. Bubble Gum</label>
+						<input type="radio" name="pregunta5" id="r18">
+						<label for="r18">B. Froyo.</label>
+						<input type="radio" name="pregunta5" id="r19">
+						<label for="r19">C. Jelly Bean.</label>
+						<input type="radio" name="pregunta5" id="r20">
+						<label for="r20">D. Kit Kat</label>
+						<input type="radio" name="pregunta5" id="r21">
+						<label for="r21">E. Gingerbread</label>
+					</div>
+
+					<div id="p6">
+						<p id="preguntas6">6. ¿Cuál de los siguientes elementos no forma parte de una app Android?</p>
+						<input type="radio" name="pregunta6" id="r22">
+						<label for="r22">A. Actividad</label>
+						<input type="radio" name="pregunta6" id="r23">
+						<label for="r23">B. Formulario (layout)</label>
+						<input type="radio" name="pregunta6" id="r24">
+						<label for="r24">C. Menú</label>
+						<input type="radio" name="pregunta6" id="r25">
+						<label for="r25">D. Emulador</label><!--CORRECTA!-->
+						<input type="radio" name="pregunta6" id="r26">
+						<label for="r26">E. Servicio</label>
+					</div>
+
+					<div id="p7">
+						<p id="preguntas7">7. En los dos sistemas operativos mayoritarios, podemos afirmar respecto a las aplicaciones más populares que:</p>
+						<input type="radio" name="pregunta7" id="r27">
+						<label for="r27">A. Los usuarios de iOS están volcados en las apps de comunicación y sociales, y prácticamente no usan juegos.</label>
+						<input type="radio" name="pregunta7" id="r28">
+						<label for="r28">B. Los usuarios de Android buscan en primer lugar apps que les permitan adaptar a sus gustos y necesidades el comportamiento de sus dispositivos.</label>
+						<input type="radio" name="pregunta7" id="r29">
+						<label for="r29">C. Los usuarios no quieren apps de comunicaciones porque estos servicios ya los soportan directamente sus smartphones</label>
+						<input type="radio" name="pregunta7" id="r30">
+						<label for="r30">D. Las apps para interactuar en redes sociales son muy populares en los dispositivos móviles.</label><!--CORRECTA!-->
+					</div>
+
+
+					<div id="p8">
+						<p id="preguntas8">8. ¿Cuál es el principal lenguaje de programación usado dentro de la plataforma Android?</p>
+						<input type="radio" name="pregunta8" id="r31">
+						<label for="r31">A. Swift</label>
+						<input type="radio" name="pregunta8" id="r32">
+						<label for="r32">B. Java.</label><!--CORRECTA!-->
+						<input type="radio" name="pregunta8" id="r33">
+						<label for="r33">C. C++</label>
+						<input type="radio" name="pregunta8" id="r34">
+						<label for="r34">D. JavaScript</label>
+					</div>
+
+					<div id="p9">
+						<p id="preguntas9">9. ¿Cómo se llama la herramienta que se usa para crear los emuladores de dispositivos en Android?</p>
+						<input type="radio" name="pregunta9" id="r35">
+						<label for="r35">A. Xcode</label>
+						<input type="radio" name="pregunta9" id="r36">
+						<label for="r36">B. App Virtual Builder.</label>
+						<input type="radio" name="pregunta9" id="r37">
+						<label for="r37">C. NDK</label>
+						<input type="radio" name="pregunta9" id="r38">
+						<label for="r38">D. AVD Manager</label><!--CORRECTA!-->
+						<input type="radio" name="pregunta9" id="r39">
+						<label for="r39">E. Android Studio IDE</label>
+					</div>
+
+					<div id="p10">
+						<p id="preguntas10">10. ¿Cuál es el lenguaje de programación para el desarrollo de aplicaciones en iOS?</p>
+						<input type="radio" name="pregunta10" id="r40">
+						<label for="r40">A. C o Swift.</label>
+						<input type="radio" name="pregunta10" id="r41">
+						<label for="r41">B. Java o C++.</label>
+						<input type="radio" name="pregunta10" id="r42">
+						<label for="r42">C. Objective-C o Swift.</label><!--CORRECTA!-->
+						<input type="radio" name="pregunta10" id="r43">
+						<label for="r43">D. C# o Objective-C.</label>
+					</div>
+
+					
+			</div>
+				<div id="div_bot_sig"><a class="siguiente" onclick="resultado(), contador()">Siguiente</a></div>
+				<div id="total_resp"></div>
+				<div id="devoluciones"></div>
+				<!--<div><a class="volver_inicio" onclick="">INICIO</a></div>-->
+				
+			</form>
+			
+			<img src="imagen4.svg" alt="img4" id="img4">
+		</section>
+
+		<script>
+			"use strict"
+
+
+			function boton_inicio(){
+				let bot1 = document.getElementById("ini1");
+				let bot2 = document.getElementById("ini2");
+				let bot3 = document.getElementById("ini3");
+				let a = document.getElementById("sector1");
+				let b = document.getElementById("sector2");
+				let c = document.getElementById("sectorregistro");
+
+				a.style.display = "flex";
+				b.style.display = "none";
+				c.style.display = "none";
+			}
+
+			function aparecer_sesion(){
+				let a = document.getElementById("sector2");
+				let b = document.getElementById("sector1");
+				let c = document.getElementById("sectorregistro");
+				a.style.display = "flex";
+				b.style.display = "none";
+				c.style.display = "none";
+			}
+
+			function aparecer_registro(){
+				let a = document.getElementById("sectorregistro");
+				let b = document.getElementById("sector2");
+				let c = document.getElementById("sector1");
+				a.style.display = "flex";
+				b.style.display= "none";
+				c.style.display= "none";	
+			}
+		
+
+			function validacioncorreo(email, e_mail){
+				var expresion = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+				var valido = expresion.test(email); //compruebo si cumple con la expresion
+				var mostrar = document.getElementById("sector3");
+				var inicio = document.getElementById("sector2");
+				var registro = document.getElementById("sectorregistro");
+				if(valido != true){
+					alert("el correo es invalido");
+				}
+
+				if (valido == true) {
+					mostrar.style.display = "flex";
+					inicio.style.display = "none";
+					registro.style.display = "none";
+				}	
+			}
+
+			var i = 1;
+			var cont = 1;
+
+			function contador(){
+				i = i + 1;
+				cont = cont+1;
+
+				if(i == cont){
+					var div_anterior = document.getElementById("p"+ (cont-1) );
+					div_anterior.value = "p"+ (cont-1);
+					var div = document.getElementById("p" + cont);
+					div.value = "p" + cont;
+					div_anterior.style.display = "none";
+					div.style.display = "block";
+				}
+			}
+
+			function resultado() {
+				var pregunta1, pregunta2, pregunta3, pregunta4, pregunta5, pregunta6, pregunta7, pregunta8, pregunta9, pregunta10, nota;
+				var resp;
+				var cont_resp = 0;
+
+				resp = "DEVOLUCIÓN:" + "<br/>" + "<br/>"
+
+				/* 1ª pregunta  */
+				if (document.getElementById('r2').checked==true) {
+					resp += "Pregunta 1: CORRECTA." + "<br/>"
+					cont_resp = cont_resp+1;
+					pregunta1=10;	
+				}
+				else {
+					resp += "Pregunta 1: INCORRECTA." + "<br/>"
+					pregunta1=0;
+				}
+				/* 2ª pregunta */
+				if (document.getElementById('r8').checked==true) {
+					resp += "Pregunta 2: CORRECTA." + "<br/>"
+					cont_resp = cont_resp+1;
+					pregunta2=10;
+				}
+				else {
+					resp += "Pregunta 2: INCORRECTA." + "<br/>"
+					pregunta2=0;
+				}
+				/* 3ª pregunta */
+				if (document.getElementById('r11').checked==true) {
+					resp += "Pregunta 3: CORRECTA." + "<br/>"
+					cont_resp = cont_resp+1;
+					pregunta3=10;
+				}
+				else {
+					resp += "Pregunta 3: INCORRECTA." + "<br/>"
+					pregunta3=0;
+				}
+				/* 4ª pregunta */
+				if (document.getElementById('r16').checked==true) {
+					resp += "Pregunta 4: CORRECTA." + "<br/>"
+					cont_resp = cont_resp+1;
+					pregunta4=10;
+				}
+				else {
+					resp += "Pregunta 4: INCORRECTA." + "<br/>"
+					pregunta4=0;
+				}
+				/* 5ª pregunta */
+				if (document.getElementById('r17').checked==true) {
+					resp += "Pregunta 5: CORRECTA." + "<br/>"
+					cont_resp = cont_resp+1;
+					pregunta5=10;
+				}
+				else {
+					resp += "Pregunta 5: INCORRECTA." + "<br/>"
+					pregunta5=0;
+				}
+				/* 6ª pregunta */
+				if (document.getElementById('r25').checked==true) {
+					resp += "Pregunta 6: CORRECTA." + "<br/>"
+					cont_resp = cont_resp+1;
+					pregunta6=10;
+				}
+				else {
+					resp += "Pregunta 6: INCORRECTA." + "<br/>"
+					pregunta6=0;
+				}
+				/* 7ª pregunta */
+				if (document.getElementById('r30').checked==true) {
+					resp += "Pregunta 7: CORRECTA." + "<br/>"
+					cont_resp = cont_resp+1;
+					pregunta7=10;
+				}
+				else {
+					resp += "Pregunta 7: INCORRECTA." + "<br/>"
+					pregunta7=0;
+				}
+				/* 8ª pregunta */
+				if (document.getElementById('r32').checked==true) {
+					resp += "Pregunta 8: CORRECTA." + "<br/>"
+					cont_resp = cont_resp+1;
+					pregunta8=10;
+				}
+				else {
+					resp += "Pregunta 8: INCORRECTA." + "<br/>"
+					pregunta8=0;
+				}
+				/* 9ª pregunta */
+				if (document.getElementById('r38').checked==true) {
+					resp += "Pregunta 9: CORRECTA." + "<br/>"
+					cont_resp = cont_resp+1;
+					pregunta9=10;
+				}
+				else {
+					resp += "Pregunta 9: INCORRECTA." + "<br/>"
+					pregunta9=0;
+				}
+				/* 10ª pregunta */
+				if (document.getElementById('r42').checked==true) {
+					resp += "Pregunta 10: CORRECTA." + "<br/>"
+					cont_resp = cont_resp+1;
+					pregunta10=10;
+				}
+				else {
+					resp += " Pregunta 10: INCORRECTA." + "<br/>"
+					pregunta10=0;
+				}
+
+				 
+				nota = pregunta1+pregunta2+pregunta3+pregunta4+pregunta5+pregunta6+pregunta7+pregunta8+pregunta9+pregunta10;
+
+				
+				var ocultar_form = document.getElementById("div_bot_sig");
+				var ultima = document.getElementById("p10");
+				var titulo_cuestionario = document.getElementById("cuestionario");
+				let img4 = document.getElementById("img4");
+				
+
+				if (i == 10){
+					document.getElementById("devoluciones").innerHTML = resp;
+					ocultar_form.style.display = "none";
+					p10.style.display = "none";
+					titulo_cuestionario.style.display = "none";
+					img4.style.display = "flex";
+
+					if (cont_resp >= 7) {
+					document.getElementById("total_resp").innerHTML = "FELICITACIONES USTED A APROBADO CON " + nota +" PUNTOS!";
+					}
+					else{
+						document.getElementById("total_resp").innerHTML = "LO LAMENTAMOS USTED A SACADO " + nota + " PUNTOS";
+					}
+
+				}
+			}
+
+		</script>
+
+	</body>
+</html>
